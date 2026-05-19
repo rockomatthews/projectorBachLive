@@ -1,4 +1,3 @@
-import { SiteHeader } from "@/components/SiteHeader";
 import { StreamStage } from "@/components/StreamStage";
 import { TippingPanel } from "@/components/TippingPanel";
 import { siteConfig } from "@/lib/config";
@@ -27,7 +26,6 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <SiteHeader />
       <main>
         <StreamStage liveVideoId={liveVideoId} />
         <TippingPanel />

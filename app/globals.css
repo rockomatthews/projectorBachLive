@@ -49,46 +49,6 @@ textarea {
   font: inherit;
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 24px;
-  padding: 20px clamp(18px, 4vw, 56px);
-  color: white;
-  background: var(--ink);
-  border-bottom: 6px solid var(--shadow);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.22);
-}
-
-.brand {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  font-size: clamp(1.35rem, 3.2vw, 2.25rem);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-shadow: 4px 4px 0 #000;
-}
-
-.brand span {
-  color: #ff2c2c;
-}
-
-.brand strong {
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  gap: 12px;
-  text-transform: uppercase;
-}
-
-.nav-links a,
 .tip-submit,
 .crypto-dialog button,
 .method-grid button,
@@ -100,13 +60,6 @@ textarea {
     box-shadow 140ms ease;
 }
 
-.nav-links a {
-  padding: 10px 16px;
-  color: var(--ink);
-  background: var(--panel-deep);
-}
-
-.nav-links a:hover,
 .tip-submit:not(:disabled):hover,
 .crypto-dialog button:hover,
 .method-grid button:hover,
@@ -121,11 +74,11 @@ main {
 }
 
 .hero-section {
-  min-height: calc(100vh - 92px);
+  min-height: 100vh;
   display: grid;
   align-content: start;
   gap: 20px;
-  padding: clamp(18px, 3vw, 32px) 0 28px;
+  padding: clamp(12px, 2vw, 24px) 0 28px;
 }
 
 .hero-copy,
