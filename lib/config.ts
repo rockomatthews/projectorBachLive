@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Projector Bach 24/7 TV",
   shortName: "Projector Bach",
-  description:
-    "Projector Bach streams live 24/7 with real-time chat and support from the community.",
+  title: "Projector Bach Streams",
+  description: "Professionally tipped streamer of everyday life",
   youtubeHandle: "@projectorbach69",
   youtubeChannelId:
     process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_ID || "UCNed650oEtpFfW6gHNCpXXQ",
