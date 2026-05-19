@@ -473,11 +473,6 @@ legend {
 }
 
 @media (max-width: 920px) {
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .chat-modal {
     top: 0;
     right: 0;
@@ -493,18 +488,16 @@ legend {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .stream-shell {
+    width: min(880px, 100%);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
   main {
-    width: min(100% - 20px, 1460px);
-  }
-
-  .nav-links {
-    width: 100%;
-  }
-
-  .nav-links a {
-    flex: 1;
-    text-align: center;
+    width: min(100% - 40px, 320px);
   }
 
   .method-grid {
@@ -526,5 +519,50 @@ legend {
   .chat-modal {
     width: 44%;
     min-width: 0;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .stream-shell,
+  .tip-card {
+    box-shadow: 8px 8px 0 var(--shadow);
+  }
+
+  .stream-frame {
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .stream-frame::before {
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    border-width: 3px;
+    font-size: 0.7rem;
+    box-shadow: 3px 3px 0 var(--shadow);
+  }
+
+  .chat-modal-header {
+    padding: 6px 8px;
+    border-bottom-width: 3px;
+    font-size: 0.62rem;
+  }
+
+  .chat-modal-header a {
+    padding: 4px 5px;
+    border-width: 2px;
+    font-size: 0.52rem;
+  }
+
+  .chat-fallback {
+    padding: 8px;
+  }
+
+  .chat-fallback strong,
+  .chat-fallback p {
+    font-size: 0.58rem;
+    line-height: 1.2;
   }
 }

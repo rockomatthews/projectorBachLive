@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { siteConfig } from "@/lib/config";
 
@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/projectorBachFavicon.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
