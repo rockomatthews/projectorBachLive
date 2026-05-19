@@ -197,6 +197,11 @@ legend {
   border: 0;
 }
 
+.starting-soon-image {
+  object-fit: cover;
+  object-position: center;
+}
+
 .chat-modal {
   position: absolute;
   top: 0;

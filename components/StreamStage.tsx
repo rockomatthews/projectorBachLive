@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getYouTubeChatEmbedUrl, getYouTubeLiveEmbedUrl } from "@/lib/youtube";
 import { siteConfig } from "@/lib/config";
 
@@ -7,17 +8,28 @@ type StreamStageProps = {
 
 export function StreamStage({ liveVideoId }: StreamStageProps) {
   const chatUrl = liveVideoId ? getYouTubeChatEmbedUrl(liveVideoId) : "";
+  const streamUrl = liveVideoId ? getYouTubeLiveEmbedUrl(liveVideoId) : "";
 
   return (
     <section id="stream" className="hero-section" aria-label="Live stream">
       <div className="stream-shell">
         <div className="stream-frame">
-          <iframe
-            title="Projector Bach YouTube live stream"
-            src={getYouTubeLiveEmbedUrl()}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+          {streamUrl ? (
+            <iframe
+              title="Projector Bach YouTube live stream"
+              src={streamUrl}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : (
+            <Image
+              className="starting-soon-image"
+              src="/projectorBachLiveSoon.png"
+              alt="Projector Bach is going live soon"
+              fill
+              priority
+            />
+          )}
           <aside className="chat-modal" aria-label="Live chat">
             <div className="chat-modal-header">
               <span>Live Chat</span>

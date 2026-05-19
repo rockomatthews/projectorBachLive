@@ -42,7 +42,18 @@ export async function getLiveVideoId() {
   }
 }
 
-export function getYouTubeLiveEmbedUrl() {
+export function getYouTubeLiveEmbedUrl(videoId?: string) {
+  if (videoId) {
+    const params = new URLSearchParams({
+      autoplay: "1",
+      mute: "1",
+      rel: "0",
+      modestbranding: "1",
+    });
+
+    return `https://www.youtube.com/embed/${videoId}?${params.toString()}`;
+  }
+
   const params = new URLSearchParams({
     channel: siteConfig.youtubeChannelId,
     autoplay: "1",
